@@ -20,12 +20,14 @@ Three layers. Core depends only on interfaces; adapters are plugged in once at a
 - Core never imports React, Expo or browser APIs.
 - Generators, parser and explainer must each be replaceable independently.
 - Use fake adapters (scripted transcripts, silent speech, fake clock) so the full loop runs in tests.
-- UI stays thin: one screen, operation toggle, Start, on-screen score + time left.
+- UI stays thin: one screen, operation toggle, Start, on-screen time left. No score during a session; the score comes in the end summary.
 - Progress stays on-device. Nothing is sent off the device.
 
 ## Behaviour spec
 - Speech recognition locale: `en-GB` (parse "nought point five" → 0.5).
-- Commands: repeat, skip, harder, easier.
+- Commands: repeat, skip. Nothing else: difficulty is automatic, so no harder/easier, and no "how am I doing".
+- "Skip" counts the problem as missed.
+- A command is not an attempt: its speech-start is not an answer time, and the 10 s / 20 s silence timers restart after it.
 - Mic off while the app speaks; no barge-in.
 - ~1 s silence ends an answer; self-corrections take the last number spoken.
 - No answer in 10 s → repeat once; another 10 s → skip, counted as missed.
@@ -41,5 +43,18 @@ Three layers. Core depends only on interfaces; adapters are plugged in once at a
 ## Current milestone: voice loop prototype (web)
 Addition only, first rung (2-digit + 2-digit with carrying). Session controller with repeat/skip, voice picker, Start button. Out of scope: other operations, difficulty engine, spaced repetition, storage, method explanations. Done when a 5-min session runs hands-free reliably on iPhone Safari.
 
+Milestone decisions:
+- Topic toggle is shown with Addition selected; the other five options are disabled.
+- The chosen voice is remembered in browser storage on the device (the one exception to "no storage"; nothing leaves the device).
+- Wrong answer says the correct answer only (quick methods come later).
+- Log every answer, command and timing in a session event log, to measure mishears and speech-start timing on the iPhone.
+
+## Tickets
+Work is tracked as markdown in `tickets/`, not GitHub issues. `tickets/README.md` has the completion order and decisions; each `M1-xx-*.md` has a Status line (`todo` → `in progress` → `done`). Start a ticket only when everything in its "Depends on" line is done, and update its Status as you go.
+
 ## Decision boundary
 Decide small technical details yourself (library versions, file layout, naming). Ask Conor before anything that changes how the app behaves, sounds or feels, costs money, or sends data off the device.
+
+## Working on tickets
+- Create a new worktree based on most recent main
+- When finished work use the completing-ticket skill
