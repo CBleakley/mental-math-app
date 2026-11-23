@@ -23,7 +23,7 @@ Every push to main is live on an HTTPS URL that opens on the iPhone.
 
 The repo side is in `netlify.toml` (build `npm run build:web`, publish `dist`, Node 24, SPA fallback). To link the site:
 
-1. Netlify → Add new site → Import an existing project → GitHub → `CBleakley/mental-math`.
+1. Netlify → Add new site → Import an existing project → GitHub → `CBleakley/mental-math-app`.
 2. Branch to deploy: `main`. Leave build settings blank; Netlify reads them from `netlify.toml`.
 3. Deploy, then open the `*.netlify.app` URL (HTTPS by default) in Safari on the iPhone.
 
