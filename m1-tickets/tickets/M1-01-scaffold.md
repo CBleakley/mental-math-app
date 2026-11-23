@@ -1,6 +1,6 @@
 # M1-01 Scaffold the project
 
-- **Status:** todo
+- **Status:** done
 - **Wave:** 1 (critical path)
 - **Depends on:** nothing
 - **Unblocks:** M1-02, M1-03
@@ -19,6 +19,6 @@ An empty app that runs in Chrome and has a passing test.
 
 ## Done when
 
-- [ ] `npm test` passes one sample test.
-- [ ] `npx expo start --web` shows a placeholder page.
-- [ ] The lint rule fails on a deliberate bad import into `src/core`.
+- [x] `npm test` passes one sample test.
+- [x] `npx expo start --web` shows a placeholder page.
+- [x] The lint rule fails on a deliberate bad import into `src/core`.
