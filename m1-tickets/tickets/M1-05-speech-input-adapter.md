@@ -1,6 +1,6 @@
 # M1-05 SpeechInput web adapter
 
-- **Status:** todo
+- **Status:** done
 - **Wave:** 3 (riskiest ticket)
 - **Depends on:** M1-02 (M1-03 for the iPhone check)
 - **Unblocks:** M1-11
