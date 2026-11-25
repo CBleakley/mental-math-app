@@ -35,7 +35,7 @@ describe('src/core import boundary', () => {
   );
 
   it('allows plain TypeScript in core', async () => {
-    expect(await ruleIdsFor("import { add } from './sample';\nexport const x = add(1, 2);\n", 'src/core/good.ts')).toEqual([]);
+    expect(await ruleIdsFor("import type { Clock } from './contracts';\nexport const now = (c: Clock) => c.now();\n", 'src/core/good.ts')).toEqual([]);
   });
 
   it('allows React outside core', async () => {

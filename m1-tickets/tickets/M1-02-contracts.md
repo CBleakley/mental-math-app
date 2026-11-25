@@ -1,6 +1,6 @@
 # M1-02 Contracts, core types and fakes
 
-- **Status:** todo
+- **Status:** done
 - **Wave:** 2 (critical path)
 - **Depends on:** M1-01
 - **Unblocks:** M1-04, M1-05, M1-06, M1-07, M1-08, M1-09, M1-10
@@ -34,5 +34,5 @@ Also the real web Clock adapter (trivial).
 
 ## Done when
 
-- [ ] Types compile and fakes have their own small tests.
+- [x] Types compile and fakes have their own small tests.
 - [ ] Contracts are reviewed before wave 3 starts.
