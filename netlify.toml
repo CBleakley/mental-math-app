@@ -1,0 +1,15 @@
+# Netlify builds the Expo web export on every push to main.
+# HTTPS is on by default for *.netlify.app, which Safari needs for the microphone.
+
+[build]
+  command = "npm run build:web"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+# Single-page app: serve index.html for any unknown path.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
