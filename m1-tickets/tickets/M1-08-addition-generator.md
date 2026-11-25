@@ -1,6 +1,6 @@
 # M1-08 Addition generator (rung 1) and phrase builder
 
-- **Status:** todo
+- **Status:** done
 - **Wave:** 3
 - **Depends on:** M1-02
 - **Unblocks:** M1-11 (M1-09 uses a stub until this lands)
@@ -17,5 +17,5 @@ Endless 2-digit plus 2-digit problems that always carry.
 
 ## Done when
 
-- [ ] Tests prove every problem in 1,000 draws has two 2-digit operands, a carry and the right answer.
-- [ ] Phrases match the plain wording rule.
+- [x] Tests prove every problem in 1,000 draws has two 2-digit operands, a carry and the right answer.
+- [x] Phrases match the plain wording rule.
