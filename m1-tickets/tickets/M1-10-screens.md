@@ -1,6 +1,6 @@
 # M1-10 Screens
 
-- **Status:** todo
+- **Status:** done
 - **Wave:** 3
 - **Depends on:** M1-02
 - **Unblocks:** M1-11
@@ -22,5 +22,5 @@ Designs: https://claude.ai/artifact/24bQQafT5F8GLjktMvAoTq
 
 ## Done when
 
-- [ ] Every screen state renders in Chrome from fake states.
-- [ ] Each matches the canvas at 390 px wide.
+- [x] Every screen state renders in Chrome from fake states.
+- [x] Each matches the canvas at 390 px wide.
