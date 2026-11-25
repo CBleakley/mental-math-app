@@ -1,6 +1,6 @@
 # M1-09 Session controller
 
-- **Status:** todo
+- **Status:** done
 - **Wave:** 3 (critical path; start first)
 - **Depends on:** M1-02 (uses stub parser and generator until M1-07 and M1-08 land)
 - **Unblocks:** M1-11
@@ -27,4 +27,4 @@ State machine: ask → listen → judge → feedback → next.
 
 ## Done when
 
-- [ ] Jest runs whole scripted sessions with fake adapters and a fake clock, covering each rule above.
+- [x] Jest runs whole scripted sessions with fake adapters and a fake clock, covering each rule above.

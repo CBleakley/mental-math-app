@@ -31,7 +31,8 @@ export interface SessionSummary extends Score {
   accuracy: number;
   /** Mean over answered problems (correct or wrong); null if none were answered. */
   averageResponseMs: Millis | null;
-  endedBy: 'time-up' | 'user';
+  /** 'mic-error': a fatal mic error (e.g. permission refused) stopped the session; `SessionState.error` says why. */
+  endedBy: 'time-up' | 'user' | 'mic-error';
   /** The sentence spoken at the end, e.g. "18 out of 22, averaging 3.1 seconds". */
   sentence: string;
 }
