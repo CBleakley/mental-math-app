@@ -1,6 +1,6 @@
 # M1-07 Utterance parser
 
-- **Status:** todo
+- **Status:** done
 - **Wave:** 3
 - **Depends on:** M1-02
 - **Unblocks:** M1-11 (M1-09 uses a stub until this lands)
@@ -20,4 +20,4 @@ Turn a transcript into an answer, a command or "unrecognised".
 
 ## Done when
 
-- [ ] A table-driven Jest suite covers every form above plus common recogniser outputs ("85", "eighty five", "85.") and passes.
+- [x] A table-driven Jest suite covers every form above plus common recogniser outputs ("85", "eighty five", "85.") and passes.
